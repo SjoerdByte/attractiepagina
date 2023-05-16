@@ -11,14 +11,14 @@ $user = $statement->fetch(PDO::FETCH_ASSOC);
 
 if($statement->rowCount() < 1)
 {
-    $msg = "Account bestaat niet!";
+    $msg = "Account bestaat nog niet!";
     header("Location: ../login.php?msg=$msg");
     exit;
 }
 
 if(!password_verify($password, $user['password']))
 {
-    $msg = "Wachtwoord niet juist!";
+    $msg = "Wachtwoord is niet correct!";
     header("Location: ../login.php?msg=$msg");
     exit;
 }

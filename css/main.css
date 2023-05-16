@@ -12,9 +12,9 @@
    ========================================================================== */
 
 html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
 /*
@@ -28,13 +28,13 @@ html {
  */
 
 ::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
 /*
@@ -42,12 +42,12 @@ html {
  */
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 /*
@@ -62,7 +62,7 @@ iframe,
 img,
 svg,
 video {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 /*
@@ -70,9 +70,9 @@ video {
  */
 
 fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /*
@@ -80,21 +80,16 @@ fieldset {
  */
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-
-/* ALGEMEEN */
-html{
-    font-size: 16px;
-}
-
-body{
-    font-family: Roboto, sans-serif;
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
 .container{
@@ -109,7 +104,6 @@ body{
     border-radius: 4px;
 }
 
-/* HEADER + NAV */
 .container.header{
     display: flex;
     align-items: center;
@@ -134,12 +128,30 @@ header{
 
 header, nav a{
     color: #f5fcf8;
+    text-decoration: none;
 }
 
+a{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+nav a:hover{
+    border-bottom: 1px solid white;
+    transition: ease-in-out .5s;
+}
+nav a{
+    transition: ease-in-out .2s;
+}
 .logo{
     max-width: 250px;
 }
 
+
+.large .ride-bottom {
+    display: flex;
+    flex-direction: column;
+}
 header nav{
     flex-grow: 1;
     text-align: right;
@@ -152,7 +164,6 @@ header h1{
     text-shadow: 0 0 7px black;
 }
 
-/* FORMS */
 .form-group{
     margin: 1rem 0;
 }
@@ -168,7 +179,6 @@ label{
     width: 600px;
 }
 
-/* TABELLEN */
 table{
     width: 100%;
 }
@@ -177,6 +187,175 @@ th{
     text-align: left;
 }
 
+.attracties{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    grid-auto-flow: dense;
+
+}
+.attractie h2{
+    padding-bottom: 10px;
+}
+
+.ride-bottom{
+    padding: 12px;
+}
+
+.themeland{
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-family: Oxanium;
+    font-weight: 600;
+}
+
+p:last-child {
+    padding-bottom: 25px;
+}
+
+.attractie{
+    background: #F5FCF8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 15px 16px 26px -12px rgba(0,0,0,0.56);
+    transition: transform ease-in-out .2s;
+    margin-bottom: 10px;
+}
+
+.float{
+    float: right;
+}
+
+.attractie:hover{
+    cursor: pointer;
+    transition: transform ease-in-out .2s;
+    transform: scale(1.05);
+}
+
+.attractie img{
+    width: 100%;
+    height: 180px;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+    padding: 0px;
+}
+
+.min-length{
+    color: red;
+}
+
+@media only screen and (max-width: 1250px){
+    .container.content{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .container.content{
+        display: block;
+    }
+}
+
+.attracties{
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
+    gap: 25px;
+}
+
+.attracties img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.large{
+    grid-column: span 2;
+}
+
+.ride{
+    background-color: #F5FCF8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 15px 16px 26px -12px rgba(0,0,0,0.56);
+    transition: transform ease-in-out .1s;
+    cursor: pointer;
+    color: #0B351D;
+}
+
+.ride:hover{
+    transform: scale(1.02);
+    transition: transform ease-in-out .1s;
+}
+
+.ride-info{
+    padding: 10px;
+    background-color: #F5FCF8;
+}
+
+.ride-bottom{
+    padding: 10px;
+    background-color: #F5FCF8;
+}
+
+button{
+    border: none;
+    border-radius: 30px;
+    background-color: #3ED67D;
+    font-family: Oxanium;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.fast-pass button img{
+    height: 17px;
+    width: auto;
+    margin-right: 5px;
+    vertical-align: baseline;
+}
+
+.fast-pass{
+    border-left: 1px solid #E5E5E5;
+    text-align: center;
+    padding: 0 10px;
+    background-color: white;;
+    padding-top: 10px;
+}
+
+.large .ride-info, .fast-pass{
+    width: 90%;
+}
+
+.ride-info, .fast-pass{
+    padding: 15px;
+    width: 90%;
+}
+
+.ride h2{
+    font-family: Oxanium;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ride p{
+    margin: 0;
+}
+
+.themeland, .fast-pass{
+    font-size: 14px;
+    color: #849D8E;
+}
+
+.min-length{
+    margin-top: 10px !important;
+    color: #849D8E;
+    font-weight: 300;
+}
+
+.min-length span{
+    font-weight: 400;
+}
 
 
 
@@ -191,7 +370,7 @@ th{
 
 .hidden,
 [hidden] {
-  display: none !important;
+    display: none !important;
 }
 
 /*
@@ -204,16 +383,16 @@ th{
  */
 
 .sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
 }
 
 /*
@@ -224,13 +403,13 @@ th{
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
 }
 
 /*
@@ -238,7 +417,7 @@ th{
  */
 
 .invisible {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 /*
@@ -255,12 +434,12 @@ th{
 
 .clearfix::before,
 .clearfix::after {
-  content: " ";
-  display: table;
+    content: " ";
+    display: table;
 }
 
 .clearfix::after {
-  clear: both;
+    clear: both;
 }
 
 /* ==========================================================================
@@ -270,14 +449,14 @@ th{
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+    /* Style adjustments for viewports that meet the condition */
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
@@ -287,71 +466,70 @@ th{
    ========================================================================== */
 
 @media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
+    *,
+    *::before,
+    *::after {
+        background: #fff !important;
+        color: #000 !important;
+        /* Black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
 
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
 
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+        content: "";
+    }
 
-  pre {
-    white-space: pre-wrap !important;
-  }
+    pre {
+        white-space: pre-wrap !important;
+    }
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
 
-  /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group;
-  }
+    /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
 
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
 
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
-
