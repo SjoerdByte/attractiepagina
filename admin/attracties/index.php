@@ -25,7 +25,7 @@ if(!isset($_SESSION['user_id']))
 <body>
 <?php require_once '../../header.php'; ?>
 <div class="container">
-    <a href="create.php">Nieuwe attractie maken. ></a>
+    <a class="newAttractie" href="create.php">Nieuwe attractie maken. ></a>
 
     <?php
     require_once '../backend/conn.php';
@@ -37,15 +37,14 @@ if(!isset($_SESSION['user_id']))
     echo "<p>In de lijst bevinden zich <strong>$count</strong> attracties.</p>";
 
     ?>
-
-
     <table>
         <tr>
             <th>Titel</th>
             <th>Themagebied</th>
             <th>Min. lengte</th>
             <th>Fastpass</th>
-        </tr>
+            <th></th>
+        </tr
         <?php foreach($rides as $ride): ?>
             <tr>
                 <td><?php echo $ride['title']; ?></td>

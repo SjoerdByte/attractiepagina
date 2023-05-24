@@ -1,6 +1,8 @@
 <header>
     <div class="container header">
-        <img src="/img/logo-big-v4.png" alt="logo" class="logo" />
+        <a href="/index.php">
+            <img  src="/img/logo-big-v4.png" alt="logo" class="logo" />
+        </a>
         <h1>Attracties</h1>
         <nav>
             <a href="/index.php">Attracties</a> |

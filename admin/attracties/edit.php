@@ -58,6 +58,14 @@ if(!isset($_SESSION['user_id']))
             </select>
         </div>
         <div class="form-group">
+            <label for="description">Beschrijving:</label>
+            <textarea name="description" id="description" class="form-input"><?php echo $ride['description']; ?></textarea>
+        </div>
+        <div class="form-group">
+            <label for="min_length">Minimale lengte:</label>
+            <input type="number" name="min_length" id="min_length" class="form-input" value="<?php echo $ride['min_length']; ?>">
+        </div>
+        <div class="form-group">
             <label for="img_file">Afbeelding:</label>
             <img src="<?php echo $base_url . "/img/attracties/" . $ride['img_file']; ?>" alt="attractiefoto" style="max-width: 120px;">
             <input type="file" name="img_file" id="img_file" class="form-input">
