@@ -177,3 +177,14 @@ if(isset($_GET['search'])&& !empty($_GET['search'])) {
 </div>
 </body>
 </html>
+
+
+
+<?php
+
+//prepare query
+$query = "SELECT * FROM rides";
+$statement = $conn->prepare($query);
+$statement->execute();
+$rides = $statement->fetchAll(PDO::FETCH_ASSOC);
+

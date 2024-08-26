@@ -44,7 +44,7 @@ if(!isset($_SESSION['user_id']))
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <input type="hidden" name="old_img" value="<?php echo $ride['img_file']; ?>">
 
-        <div class="form-group">
+        <div class="fofrm-group">
             <label for="title">Titel:</label>
             <input type="text" name="title" id="title" class="form-input" value="<?php echo $ride['title']; ?>">
         </div>
